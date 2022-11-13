@@ -65,6 +65,12 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		
+			<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+   	    </dependency>
+		
 
 	</dependencies>
 
@@ -72,7 +78,7 @@
 		<repository>
 			<id>releases</id>
 			<name>Releases</name>
-			<url>http://192.168.1.18:8081/repository/maven-releases/</url>
+			<url>http://192.168.1.46:8081/repository/maven-releases/</url>
 		</repository>
 		
 	</distributionManagement>
