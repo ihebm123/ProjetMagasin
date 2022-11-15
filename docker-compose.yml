@@ -15,7 +15,7 @@ services:
     image: abdelkaderferchichi1993/achatproject:1.0
     container_name: springcontainer
     ports:
-      - 8089:8089
+      - 8090:8090
     depends_on:
       - database
     networks:
