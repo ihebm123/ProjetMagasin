@@ -21,16 +21,8 @@ services:
     networks:
       - projectdevops 
     restart: on-failure  
-  angular:
-    image: dadoulanda/angular
-    container_name: angularcontainer
-    ports: 
-      - 80:80
-    depends_on:
-      - spring-boot
-    networks:
-      - projectdevops   
- 
+    
+
 networks:
   projectdevops:
      
