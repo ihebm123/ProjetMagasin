@@ -12,7 +12,7 @@ services:
      - projectdevops
      
   spring-boot:
-    image: nadine2benhmida/devopsproject_devopsproject:1.0
+    image: nadine2benhmida/achatproject:1.0
     container_name: springcontainer
     ports:
       - 8090:8090
