@@ -36,14 +36,15 @@ import tn.esprit.rh.achat.services.FactureServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 @RunWith(SpringRunner.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Slf4j
-@SpringBootTest
+@SpringBootTest(classes = FactureServiceImplTest.class)
 class FactureServiceImplTest {
 	
 	@Mock
 	FactureRepository factureRepository;
 	
-	@Autowired
+	@InjectMocks
 	FactureServiceImpl factureServiceImpl;
 	
 	
