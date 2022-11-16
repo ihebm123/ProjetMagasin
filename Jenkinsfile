@@ -68,7 +68,7 @@ tools
               stage('NEXUS DEPLOY') {
             steps {
 
-              sh "mvn deploy -Dmaven.test.skip=true "
+              //sh "mvn deploy -Dmaven.test.skip=true "
               
                 echo 'NEXUS WORKED'
 
