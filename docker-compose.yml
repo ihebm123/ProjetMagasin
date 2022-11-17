@@ -23,7 +23,7 @@ services:
     restart: on-failure
     
   angular:
-    image: abdazizfitouri1998/achatfront:1.0
+    image: abdazizfitouri1998/achatangular:1.0
     container_name: angularcontainer
     ports: 
       - 4200:4200
