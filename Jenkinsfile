@@ -38,13 +38,6 @@ pipeline {
                 sh "mvn package -DskipTests"
             }
         }
-        stage("DOCKER COMPOSE") { 
-             steps { 
-                 script { 
-                    sh "docker-compose up -d"
-                } 
-            } 
-        }
         stage('MAVEN TEST'){
             steps{
                 script
@@ -85,6 +78,13 @@ pipeline {
                     }
                 } 
             }
+        }
+	stage("DOCKER COMPOSE") { 
+             steps { 
+                 script { 
+                    sh "docker-compose up -d"
+                } 
+            } 
         }
         stage('SENDING EMAIL'){
 	        steps {
