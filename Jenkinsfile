@@ -109,12 +109,11 @@ tools
 
                 script { 
 
-                    //docker.withRegistry( '', registryCredential ) { 
+                    docker.withRegistry( '', registryCredential ) { 
 
-                      //dockerImage.push() 
+                      dockerImage.push() 
 
-                    //}
-                    echo 'pushing worked'
+                    }
 
                 } 
 
