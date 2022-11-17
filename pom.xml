@@ -78,7 +78,7 @@
 		<repository>
 			<id>releases</id>
 			<name>Releases</name>
-			<url>http://192.168.1.17:8081/repository/maven-releases/</url>
+			<url>http://192.168.1.44:8081/repository/maven-releases/</url>
 		</repository>
 		
 	</distributionManagement>
@@ -97,6 +97,8 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			
+			
 		</plugins>
 	</build>
 

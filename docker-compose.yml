@@ -1,12 +1,36 @@
 version: '3'
-
 services:
-  mysqldb:
-    container_name: mysqldb
-    image: mysql:8
-    restart: unless-stopped
+  database:
+    image: mysql
+    container_name: mysql
     environment:
-     - MYSQL_ROOT_PASSWORD=root
-    volumes: 
-     - /home/mysql/data:/var/lib/mysql
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: ihebdb   
+    ports:
+      - 3306:3306
+    networks:
+     - projectdevops
+     
+  spring-boot:
+    image: ihebdevops/achatproject:1.0
+    container_name: springcontainer
+    ports:
+      - 8089:8089
+    depends_on:
+      - database
+    networks:
+      - projectdevops 
+    restart: on-failure  
+  angular:
+    image: ihebdevops/achatfrontangular:1.0
+    container_name: angularcontainer
+    ports: 
+      - 4200:4200
+    depends_on:
+      - spring-boot
+    networks:
+      - projectdevops   
+ 
+networks:
+  projectdevops:
      
